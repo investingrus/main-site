@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.54.0" />
+
+
+
+<link rel="canonical" href="https://www.investingrus.com/blog/saving-for-retirement/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Saving for Retirement - The Investing-R-Us</title>
+    
+<meta name="description" content="Pop-quiz You worked very hard and earned $1000 that you want to save for your retirement. You are going to retire in 20 to 40 years. What should you do? Keep the money in your mattress. Buy gold. Buy US Treasuries. Buy ETF tracking S&amp;amp;P500.  You can jump to the answer right away or keep reading to see the analysis.Problem Setup and Data I would like to investigate what is the probability of a negative return on an investment over a fixed time horizon - holding time.">
+
+<meta property="og:title" content="Saving for Retirement - The Investing-R-Us">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.investingrus.com/blog/saving-for-retirement/">
+<meta property="og:image" content="https://www.investingrus.com/images/default.png">
+<meta property="og:site_name" content="The Investing-R-Us">
+<meta property="og:description" content="Pop-quiz You worked very hard and earned $1000 that you want to save for your retirement. You are going to retire in 20 to 40 years. What should you do? Keep the money in your mattress. Buy gold. Buy US Treasuries. Buy ETF tracking S&amp;amp;P500.  You can jump to the answer right away or keep reading to see the analysis.Problem Setup and Data I would like to investigate what is the probability of a negative return on an investment over a fixed time horizon - holding time.">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="The Investing-R-Us">
+<meta name="twitter:url" content="https://www.investingrus.com/blog/saving-for-retirement/">
+<meta name="twitter:title" content="Saving for Retirement - The Investing-R-Us">
+<meta name="twitter:description" content="Pop-quiz You worked very hard and earned $1000 that you want to save for your retirement. You are going to retire in 20 to 40 years. What should you do? Keep the money in your mattress. Buy gold. Buy US Treasuries. Buy ETF tracking S&amp;amp;P500.  You can jump to the answer right away or keep reading to see the analysis.Problem Setup and Data I would like to investigate what is the probability of a negative return on an investment over a fixed time horizon - holding time.">
+<meta name="twitter:image" content="https://www.investingrus.com/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https://www.investingrus.com/"
+    },
+    "headline": "Saving for Retirement - The Investing-R-Us",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.investingrus.com/images/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2019-04-10T00:00:00JST",
+    "dateModified": "2019-04-10T00:00:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "The Investing-R-Us"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Investing-R-Us",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.investingrus.com/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "Pop-quiz You worked very hard and earned $1000 that you want to save for your retirement. You are going to retire in 20 to 40 years. What should you do?
+ Keep the money in your mattress. Buy gold. Buy US Treasuries. Buy ETF tracking S&amp;P500.  You can jump to the answer right away or keep reading to see the analysis.
+Problem Setup and Data I would like to investigate what is the probability of a negative return on an investment over a fixed time horizon - holding time."
+  }
+</script>
+
+
+    <link href="https://www.investingrus.com/css/styles.css" rel="stylesheet">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/CommonHTML"],
+        extensions: ["tex2jax.js","AssistiveMML.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+          equationNumbers: { autoNumber: "AMS" }
+        }
+      });
+    </script>
+    <script type="text/javascript"
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js">
+    </script>
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-XXXXXXXX-XX', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.investingrus.com">IRUS</a>
+            <a class="navbar-brand" href="https://www.investingrus.com/">The Investing-R-Us</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://www.investingrus.com/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.investingrus.com/blog/" itemprop="url"><span itemprop="title">blog</span></a></li>
+        
+        <li class="active">Saving for Retirement</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-04-10T00:00:00JST">Apr 10, 2019</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://www.investingrus.com/blog/">blog</a></li>
+      
+    </ul>
+
+    <h1 class="title">Saving for Retirement</h1>
+  </header>
+
+  
+
+  <div class="article-body"><h2 id="popquiz">Pop-quiz</h2>
+
+<p>You worked very hard and earned $1000 that you want to save for your retirement.
+You are going to retire in 20 to 40 years. What should you do?</p>
+
+<ol>
+<li>Keep the money in your mattress.</li>
+<li>Buy gold.</li>
+<li>Buy US Treasuries.</li>
+<li>Buy ETF tracking S&amp;P500.</li>
+</ol>
+
+<p>You can <a href="#conclusion">jump to the answer</a> right away or keep reading to see the
+analysis.</p>
+
+<h2 id="problem-setup-and-data">Problem Setup and Data</h2>
+
+<p>I would like to investigate what is the probability of a negative return on
+an investment over a fixed time horizon - holding time. Since I cannot time the
+market, I assume I randomly pick a time to invest. I will use historical data to
+see all possible returns for a given time horizon, with all possible starting
+times. The probability of negative returns will be computed from this sample
+distribution.</p>
+
+<p>I will use historical data compiled by <a href="http://www.econ.yale.edu/~shiller/data.htm">Robert Shiller</a>.
+The data contains a monthly history of S&amp;P500, its monthly dividends, 10 year
+treasury rates and the Consumer Price Index (CPI) describing inflation
+from 1871 to present.</p>
+
+<h2 id="mattress-saving-strategy">Mattress Saving Strategy</h2>
+
+<p>First, I'd like to consider an old strategy where you keep the money in your
+mattress. It turns out there were periods in US history when that was not a bad
+idea. Investing by keeping money in cash works if your dollar can buy more in
+the future than today. I use the Consumer Price Index (CPI) as a measure of how
+much you can buy using your money. In particular, CPI allows us to express the
+value of past dollars in today's dollars:</p>
+
+<p><figure style="text-align: center"><img src="/images/dollar.png" alt="value of dollar"></figure></p>
+
+<p>You can see that before 1900 and around 1930 the value of money had increased
+(deflation). The most recent deflation happened in 2009, although it was small
+and you cannot see it on this graph.</p>
+
+<p>Let's see how this investment strategy performs (the plot shows the mean, median,
+and percentiles - 5% and 95%, of the return distribution given the length of the
+holding period):</p>
+
+<p><figure style="text-align: center"><img src="/images/mattress.png" alt="mattress strategy performance"></figure></p>
+
+<p>We can see that if we keep money in the mattress, we most probably would lose
+its value. The following plot shows the probability of losing its value given
+the length of the holding period:</p>
+
+<p><figure style="text-align: center"><img src="/images/p-mattress.png" alt="mattress strategy loss probability"></figure></p>
+
+<h2 id="gold">Gold</h2>
+
+<p>Gold prices look a little bit better - there is no obvious down-trend and if you
+squint hard enough you can see an up-trend:</p>
+
+<p><figure style="text-align: center"><img src="/images/gold-history.png" alt="gold prices"></figure></p>
+
+<p>Let's see how the returns are distributed:</p>
+
+<p><figure style="text-align: center"><img src="/images/gold-rets.png" alt="gold returns"></figure></p>
+
+<p>The probability of losing value when investing in gold for different holding
+periods is shown on the plot below:</p>
+
+<p><figure style="text-align: center"><img src="/images/gold-loss.png" alt="gold loss probability"></figure></p>
+
+<p>This is quite a bit better than keeping money in a mattress, but there is still
+a 30% probability of losing money which is quite depressing.</p>
+
+<h2 id="bonds">Bonds</h2>
+
+<p>The data that I use has the history of the yield for 10 year treasury bonds. I
+will consider the following saving strategy using 10 year bonds: I will buy
+a 10 year bond, keep it until maturity, then buy another bond and repeat the
+process until the end of holding period. If the holding period ends before the
+last 10 year bond matures, I will use its yield until the end of the holding
+period.</p>
+
+<p>For example, suppose I want to start saving when I'm in January 1990. Suppose
+I want to hold the saving for 25 years. Then I will buy 10 year bond with yield
+specified for January 1990. This bond will maature in January 2000. Once it
+matures I receive premium and buy another 10 year bond with yield specified for
+January 2000. This bond will mature in January 2010. Now I need to buy 5 year
+bond. I will assume that such bond has same yield as 10 year bond specified in
+January 2010.</p>
+
+<p>Let's see how the yield of a 10 year bond changed over time:</p>
+
+<p><figure style="text-align: center"><img src="/images/bond-hist.png" alt="10y bond yeilds"></figure></p>
+
+<p>We compute the returns of this strategy over different holding times, adjusting
+for inflation:</p>
+
+<p><figure style="text-align: center"><img src="/images/bond-rets.png" alt="bond strategy returns"></figure></p>
+
+<p>The probability of loss is a lot smaller compare to the previous strategies:</p>
+
+<p><figure style="text-align: center"><img src="/images/bond-loss.png" alt="bond loss probability"></figure></p>
+
+<p>Even though the probability of loss is lower than with the previous two
+strategies, I was quite surprised that it was still that high. Let's take a
+look at stocks and see if we can get better results.</p>
+
+<h2 id="stocks">Stocks</h2>
+
+<p>The stock data has two numbers for each month: the index level and dividends.
+On the news you usually hear a lot about the stock index level, but not that
+much about dividends. You can do several things with dividends - spend them,
+keep them stashed somewhere (mattress), reinvest (into index or other securities).
+I will consider two strategies. With the first I will just spend my dividends,
+or in other words, I will just pay attention to the level of the index. With the
+second, more reasonable, strategy I will reinvest the dividends into the same
+index.</p>
+
+<h3 id="no-dividend-reinvestment">No Dividend Reinvestment</h3>
+
+<p>The inflation adjusted value of the SP500 index changed over time as follows:</p>
+
+<p><figure style="text-align: center"><img src="/images/sp500.png" alt="inflation adjusted SP500"></figure></p>
+
+<p>The returns of the &quot;no dividend reinvestment&quot; strategy are:</p>
+
+<p><figure style="text-align: center"><img src="/images/sp500-nd-rets.png" alt="no dividends returns"></figure></p>
+
+<p>Compare this plot to the bond's returns. They are quite similar, with similar
+values of returns and distribution. However, the probability of loss is twice
+as much as that of the bond strategy.</p>
+
+<p><figure style="text-align: center"><img src="/images/sp500-nd-loss.png" alt="no dividend loss"></figure></p>
+
+<p>Let's see how the results change when we reinvest the dividends.</p>
+
+<h3 id="with-dividend-reinvestment">With Dividend Reinvestment</h3>
+
+<p>The returns of the strategy with reinvested dividends are:</p>
+
+<p><figure style="text-align: center"><img src="/images/sp500-rets.png" alt="no dividends returns"></figure></p>
+
+<p>Comparing to the other strategies it is obvious that this one produces the
+highest returns. But more importantly (for the goal of saving) the distribution
+is mostly located in the positive region (at least for long enough holding
+periods). Let's see what this means for the probability of loss:</p>
+
+<p><figure style="text-align: center"><img src="/images/sp500-loss.png" alt="sp500 with dividends loss"></figure></p>
+
+<p>Holy-moly - the probability of loss is essentially 0 if we hold our portfolio
+for a little longer than 20 years.</p>
+
+<p><strong>Think how remarkable this result is:</strong> we used stock history spanning
+two world wars, the Great Depression and the Great Recession. Even if you had to
+sell your stocks at the bottom of the Great Depression, but held them for more
+than 20 years before that, you would not suffer a loss in value in your
+portfolio, you would not lose a single hard earned dollar. From the analysis
+above no other asset class could give us such certainty.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As the result of the analysis above shows, the answer to the pop-quiz is (4) -
+buy S&amp;P500, but don't forget to reinvest dividends. Let’s look at the
+probability of loss for each of these strategies on the same plot:</p>
+
+<p><figure style="text-align: center"><img src="/images/loss.png" alt="loss for all strategies"></figure></p>
+
+<p>As a bonus we also get higher overall returns when investing in stocks. The
+plot below shows the distribution of yields for the stock and bond strategies:</p>
+
+<p><figure style="text-align: center"><img src="/images/yields.png" alt="yields"></figure></p>
+
+<p>If you look carefully enough, you can see that for holding periods of less than
+14 years the stock strategy is a lot more risky than the bond. However if your
+holding period exceeds 14 years the stock strategy is both, less risky and
+yielding better returns. Also notice that in long term, the width of the yield
+distribution for the stock strategy is about the same as for bonds, but overall
+it is shifted up by several percent.</p>
+
+<p>What does it all mean for regular folks that are trying to save for the
+retirement? Don't worry about whether the market is trending up or down, it's in
+a bubble or a recession is coming. You will never be able to time the market.
+But putting money in stocks and not touching them (other than reinvesting
+dividends) for long periods of time will ensure that your hard-earned money will
+not be lost, also giving you a chance to earn quite a healthy return - no downside
+and all the upside.</p>
+
+<h2 id="whats-next">What's Next</h2>
+
+<p>I'm planning to continue exploration on how regular folks, &quot;rest of us&quot;, should
+invest to save for retirement. Here are some of the questions I'm planning to
+cover:</p>
+
+<ul>
+<li><p>Most of the savings often come closer to retirement. I'd like to investigate
+which strategy would work best in that case.</p></li>
+
+<li><p>The common advice by financial profesionals is to allocate more capital
+to bonds as you approach retirement age. I'd like to explore how sound this
+advice is and what would be reasonable schedule for such reallocation.</p></li>
+
+<li><p>Tax advantaged accounts (401K, IRA, Roth IRA) are quite popular means to
+save for retirement. I'd like to quantify how much benefit those accounts
+provide.</p></li>
+</ul>
+</div>
+
+  <footer class="article-footer">
+    <section class="bordered">
+    <h4>If you like my style of research and would like to be notified when I
+publish next post, please leave your email here:</h4>
+
+
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 
+</style>
+<div id="mc_embed_signup">
+<form action="https://investingrus.us20.list-manage.com/subscribe/post?u=6a88a9d0f9664c11fd4a138b7&amp;id=5a2b7d9130" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Get notifications about new posts:</h2>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a88a9d0f9664c11fd4a138b7_5a2b7d9130" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+    </section>
+
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://www.investingrus.com/categories/investing/">investing</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">TAGS</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://www.investingrus.com/tags/investing/">investing</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+  </footer>
+
+</article>
+
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "investingrus" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://www.investingrus.com/blog/saving-for-retirement/" class="list-group-item">Saving for Retirement</a>
+      
+      <a href="https://www.investingrus.com/blog/" class="list-group-item">Blogs</a>
+      
+      <a href="https://www.investingrus.com/categories/" class="list-group-item">Categories</a>
+      
+      <a href="https://www.investingrus.com/tags/investing/" class="list-group-item">Investing</a>
+      
+      <a href="https://www.investingrus.com/categories/investing/" class="list-group-item">Investing</a>
+      
+      <a href="https://www.investingrus.com/tags/" class="list-group-item">Tags</a>
+      
+      <a href="https://www.investingrus.com/" class="list-group-item">The Investing-R-Us</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://www.investingrus.com/categories/investing" class="list-group-item">investing</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://www.investingrus.com/tags/investing" class="list-group-item">investing</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <p>
+              <span class="h-logo">&copy; Investing-R-Us</span></p>
+            <p><a href="mailto:info@investingrus.com">info@investingrus.com</a></p>
+          </div>
+          <div class="col-md-3">
+            <a href="https://twitter.com/InvestingUs">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+              <span class="username">Investing-R-Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
