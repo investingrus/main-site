@@ -196,18 +196,19 @@ and all the upside.
 
 ## What's Next
 
-I'm planning to continue exploration on how regular folks, "rest of us", should
-invest to save for retirement. Here are some of the questions I'm planning to
-cover:
+I'm planning to continue the exploration of how regular folks, "the rest of us", 
+should invest to save for retirement. Here are some of the questions I'm 
+planning to cover:
 
-* Most of the savings often come closer to retirement. I'd like to investigate
+* Most of the savings are often contributed closer to retirement (as salary
+increases, mortgage gets paid out, etc.). I'd like to investigate
 which strategy would work best in that case.
 
-* The common advice by financial profesionals is to allocate more capital
-to bonds as you approach retirement age. I'd like to explore how sound this
-advice is and what would be reasonable schedule for such reallocation.
+* The common advice by financial professionals is to reallocate portfolio
+to bonds from stocks as you approach retirement. I'd like to explore how sound 
+this advice is and what would be a reasonable schedule for such a reallocation.
 
-* Tax advantaged accounts (401K, IRA, Roth IRA) are quite popular means to
+* Tax advantaged accounts (401K, IRA, Roth IRA) are quite a popular means to
 save for retirement. I'd like to quantify how much benefit those accounts
 provide.
 
