@@ -156,8 +156,8 @@ periods). Let's see what this means for the probability of loss:
 
 {style="text-align: center"}![sp500 with dividends loss](/images/sp500-loss.png)
 
-Holy-moly - the probability of loss is essentially 0 if we hold our portfolio
-for a little longer than 20 years.
+Holy-moly - the probability of loss is 0 if we hold our portfolio for longer 
+than 20 years.
 
 **Think how remarkable this result is:** we used stock history spanning
 two world wars, the Great Depression and the Great Recession. Even if you had to 
@@ -179,12 +179,12 @@ plot below shows the distribution of yields for the stock and bond strategies:
 
 {style="text-align: center"}![yields](/images/yields.png)
 
-If you look carefully enough, you can see that for holding periods of less than 
-14 years the stock strategy is a lot more risky than the bond. However if your 
-holding period exceeds 14 years the stock strategy is both, less risky and
-yielding better returns. Also notice that in long term, the width of the yield
-distribution for the stock strategy is about the same as for bonds, but overall
-it is shifted up by several percent.
+You can see that for holding periods of less than 9 years the stock strategy is 
+a lot more risky than the bond. However if your holding period exceeds 9 years 
+the stock strategy is both, less risky and yielding better returns. Also notice 
+that in long term, the width of the yield distribution for the stock strategy is 
+about the same as for bonds, but overall it is located above bond yield 
+distribution.
 
 What does it all mean for regular folks that are trying to save for the 
 retirement? Don't worry about whether the market is trending up or down, it's in 
